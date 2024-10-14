@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+ .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table thead {
+    background-color: #343a40; /* Dark background for the header */
+    color: #ffffff;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .user-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Light gray for alternate rows */
+  }
+  
+  .user-table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #343a40; /* Dark text for the heading */
+    font-size: 24px;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  

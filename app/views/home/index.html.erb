@@ -1,0 +1,26 @@
+<% if user_signed_in? && current_user.admin? %>
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+        <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td>
+            <% if user.admin? %>
+              <%= link_to 'Remove Admin', remove_admin_user_path(user), data: { turbo_method: :patch }, class: 'btn btn-danger' %>
+            <% else %>
+              <%= link_to 'Make Admin', set_admin_user_path(user), data: { turbo_method: :patch }, class: 'btn btn-primary' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
